@@ -1,0 +1,69 @@
+<!-- 
+ *
+ * Desenvolvido por Integrando.se
+ * hello@integrando.se
+ * 
+ * Bootstrap v.3
+ *
+ -->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="en-us">
+
+<head>
+    <title> Modelo Vtex</title>
+    <vtex:metaTags/>
+    <vtex:template id="commonStyles" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body id="account-page">
+
+    <div class="page">
+
+        <!--  SubTemplate: Header -->
+        <vtex:template id="Header" />
+        <!-- /SubTemplate: Header -->
+
+        <div id="account-extra-top"></div>
+
+        <section id="account-content" class="container">
+    		
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-6">
+                    <vtex.cmc:accountUserProfile />
+                </div>
+                <div class="col-xs-12 col-sm-6">
+        		  <vtex.cmc:accountAddress/>
+                </div>
+            
+            </div>
+
+        </section><!-- #content -->  
+        
+        <div id="account-extra-bottom"></div>
+                
+        <!--  SubTemplate: Footer -->
+        <vtex:template id="Footer" />
+        <!-- /SubTemplate: Footer -->
+    
+    </div><!-- .container-fluid -->
+
+</body>
+    <vtex:template id="commonScripts" />
+    <script type="text/javascript">
+        $(document).ready( function(){
+            var hash = $(location).attr('hash');
+            var $links = $('a[data-toggle="modal"]');
+
+            $.each( $links, function(){
+                var $this = $(this);
+                if( $this.attr('href') === hash ){
+                    $this.click();
+                } 
+            });
+        })
+    </script>
+</html>

@@ -1,0 +1,45 @@
+<!-- 
+ *
+ * Desenvolvido por Integrando.se
+ * hello@integrando.se
+ * 
+ * Bootstrap v.3
+ *
+ -->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="en-us">
+
+<head>
+    <title> Modelo Vtex</title>
+    <vtex:metaTags/>
+    <vtex:template id="commonStyles" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body id="login-page">
+
+    <div class="page">
+
+        <!--  SubTemplate: Header -->
+        <vtex:template id="Header" />
+        <!-- /SubTemplate: Header -->
+                    
+        <div id="login-extra-top"></div>                    
+
+        <section id="login-content" class="container">
+    		<vtex.cmc:userLogin/>
+        </section><!-- #content -->  
+                    
+        <div id="login-extra-bottom"></div>   
+                
+        <!--  SubTemplate: Footer -->
+        <vtex:template id="Footer" />
+        <!-- /SubTemplate: Footer -->
+    
+    </div><!-- .container-fluid -->
+
+</body>
+    <vtex:template id="commonScripts" />
+</html>

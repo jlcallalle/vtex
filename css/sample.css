@@ -1,0 +1,9 @@
+#medialab h2 {
+	color:red;
+	font-size: 25px;
+	text-transform: uppercase;
+}
+
+.content-template p {
+	color: green;
+}
